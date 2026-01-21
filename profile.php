@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyBook | Profile</title>
+        <link rel="stylesheet" href="Assets/Styles/profile.css">
+    </head>
+
+    <body>
+        <!-- Top Bar -->
+        <div id="top-bar">
+            <div id="site-name">
+                MyBook
+                <input type="text" id="search-box" placeholder="Search For People...">
+                <img id="profile-icon" src="Assets/Test-Images/selfie.jpg">
+            </div>
+        </div>
+
+        <!-- Cover Area -->
+         <div id="cover-area">
+
+            <!-- Top Profile Page -->
+            <div id="profile-area">
+                <div id="cover-image-area">
+                    <img src="Assets/Test-Images/mountain.jpg" id="cover-image">
+                    <img src="Assets/Test-Images/selfie.jpg" id="profile-image">
+                </div>
+                <div id="profile-name">Mary Banda</div>
+                
+                <div id="menu-button">Timeline</div> | <div id="menu-button">About</div> | <div id="menu-button">Friends</div> | <div id="menu-button">Photos</div> | <div id="menu-button">Settings</div>
+            </div>
+
+            <!-- Content: Friends + Posts -->
+            <div id="main-content-area">
+
+                <!-- Friends Section -->
+                <div id="friends-area">
+                    <div id="friends-bar">
+                        <div id="section-title">Friends</div>
+
+                        <div id="friend">
+                            <img id="friend-image" src="Assets/Test-Images/user1.jpg">
+                            <div id="friend-name">First Guy</div>
+                        </div>
+
+                        <div id="friend">
+                            <img id="friend-image" src="Assets/Test-Images/user2.jpg">
+                            <div id="friend-name">Second Guy</div>
+                        </div>
+
+                        <div id="friend">
+                            <img id="friend-image" src="Assets/Test-Images/user3.jpg">
+                            <div id="friend-name">First Girl</div>
+                        </div>
+
+                        <div id="friend">
+                            <img id="friend-image" src="Assets/Test-Images/user4.jpg">
+                            <div id="friend-name">Third Guy</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Posts Section -->
+                <div id="posts-area">
+
+                    <!-- Post Box -->
+                    <div id="post-box">
+                        <textarea id="text-area" placeholder="What's on your mind?"></textarea>
+                        <input id="post-button" type="submit" value="post">
+                    </div>
+
+                    <!-- Profile Posts -->
+                    <div id="post-bar">
+                        <div id="section-title">Posts</div>
+                        <div id="post">
+                            <div>
+                                <img src="Assets/Test-Images/user1.jpg" id="post-icon">
+                            </div>
+                            <div id="post-message">
+                                <div id="post-name">First Guy</div>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                <div id="post-options">
+                                    <a>Like</a> . <a>Comment</a> . <span>April 23 2020</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="post">
+                            <div>
+                                <img src="Assets/Test-Images/user2.jpg" id="post-icon">
+                            </div>
+                            <div id="post-message">
+                                <div id="post-name">Second Guy</div>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                <div id="post-options">
+                                    <a>Like</a> . <a>Comment</a> . <span>April 23 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+         </div>
+    </body>
+</html>

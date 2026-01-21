@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>MyBook | Signup</title>
+        <link rel="stylesheet" href="Assets/Styles/login.css">
+    </head>
+
+    <body>
+        <!-- Top Bar -->
+        <div id="top-bar">
+            <div id="site-name">MyBook</div>
+            <div id="signup-button">Login</div>
+        </div>
+
+        <!-- Main Signup Page -->
+        <div id="login-page">
+            Signup to MyBook
+            <input type="text" id="text" placeholder="First Name">
+            <input type="text" id="text" placeholder="Last Name">
+
+            <select type="text" id="text" onchange="this.className=this.options[this.selectedIndex].className" class="greyText" style="padding: 2px;">
+                <option disabled="disabled" selected="selected">Gender</option>
+                <option class="blackText">Male</option>
+                <option class="blackText">Female</option>
+            </select>
+
+            <input type="text" id="text" placeholder="Email">
+            <input type="password" id="text" placeholder="Password">
+            <input type="password" id="text" placeholder="Retype Password">
+            <input type="submit" id="button" value="Signup">
+        </div>
+    </body>
+</html>
