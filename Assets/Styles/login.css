@@ -73,3 +73,14 @@ body {
     color: white;
     margin-bottom: 50px;
 }
+
+
+/* PHP Styles */
+#error {
+    background-color: grey;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
