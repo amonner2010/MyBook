@@ -1,3 +1,7 @@
+<?php
+    include("Assets/PHP/login.php");
+?>
+
 <html>
     <head>
         <title>MyBook | Login</title>
@@ -14,9 +18,11 @@
         <!-- Main Login Page -->
         <div id="login-page">
             Login to MyBook
-            <input type="text" id="text" placeholder="Email">
-            <input type="password" id="text" placeholder="Password">
-            <input type="submit" id="button" value="Login">
+            <form method="post">
+                <input name="email" value="<?php echo $email ?>" type="text" id="text" placeholder="Email">
+                <input name="password" value="<?php echo $password ?>" type="password" id="text" placeholder="Password">
+                <input type="submit" id="button" value="Login">
+            </form>
         </div>
     </body>
 </html>

@@ -72,6 +72,7 @@
 
         // Save Uploaded Data //
         public function create_user($data) {
+            
             // Collected Data //
             $first_name = ucfirst($data['first_name']);
             $last_name = ucfirst($data['last_name']);
@@ -79,7 +80,7 @@
             $email = $data['email'];
             $password = $data['password'];
 
-            // Created Data
+            // Created Data //
             $url_address = strtolower($first_name) . "." . strtolower($last_name);
             $user_id = $this->create_user_id();
             

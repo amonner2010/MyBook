@@ -15,7 +15,7 @@
         }
 
         // Read from Database //
-        function read() {
+        function read($query) {
             $conn = $this->connect();
             $result = mysqli_query($conn, $query);
 

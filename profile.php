@@ -1,3 +1,7 @@
+<?php
+    include("Assets/PHP/profile.php");
+?>
+
 <!DOCTYPE html>
 <html>
     <head>

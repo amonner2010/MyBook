@@ -19,16 +19,19 @@
         $signup = new Signup();
         $result = $signup->evaluate($_POST);
 
+        // Display Errors or Redirect //
         if($result != "") {
             echo "<div id='error'>";
             echo "The following errors occured: <br><br>";
             echo $result;
             echo "</div>";
         } else {
-            header("Location: profile.php");
+            header("Location: login.php");
             die;
         }
 
+
+        // Save Data //
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
         $email = $_POST['email'];
