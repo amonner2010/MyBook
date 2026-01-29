@@ -21,7 +21,7 @@
                 if($password == $row['password']) {
 
                     // Create Session Data //
-                    $_SESSION['user_id'] = $row['user_id'];
+                    $_SESSION['mybook_user_id'] = $row['user_id'];
 
                 } else {
                     $this->error .= "Incorrect email or password. <br>";
@@ -33,4 +33,20 @@
             return $this->error;
         
         }
+
+        public function check_login($id) {
+            
+            // Read in Database //
+            $DB = new Database();
+            $query = "select user_id from users where user_id = '$id' limit 1";
+            $result = $DB->read($query);
+
+            // Check User Exists in System //
+            if($result) {
+                return true;
+            }
+
+            return false;
+        }
+
     }
