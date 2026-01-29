@@ -1,0 +1,11 @@
+<?php 
+    session_start();
+    
+    if(isset($_SESSION['mybook_user_id'])) {
+        $_SESSION['mybook_user_id'] = NULL;
+        unset($_SESSION['mybook_user_id']);
+        unset($_SESSION['user_id']);
+    }
+
+    header("Location: login.php");
+    die;

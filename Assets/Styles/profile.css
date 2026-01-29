@@ -31,6 +31,14 @@ body {
     background-position: right;
 }
 
+#logout {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    float: right;
+    margin: 10px;
+}
+
 #profile-icon {
     width: 50px;
     float: right

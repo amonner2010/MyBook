@@ -16,6 +16,7 @@
                 MyBook
                 <input type="text" id="search-box" placeholder="Search For People...">
                 <img id="profile-icon" src="Assets/Test-Images/selfie.jpg">
+                <a href="logout.php"><span id="logout">Logout</span></a>
             </div>
         </div>
 
@@ -28,7 +29,7 @@
                     <img src="Assets/Test-Images/mountain.jpg" id="cover-image">
                     <img src="Assets/Test-Images/selfie.jpg" id="profile-image">
                 </div>
-                <div id="profile-name">Mary Banda</div>
+                <div id="profile-name"><?php echo $full_name ?></div>
                 
                 <div id="menu-button">Timeline</div> | <div id="menu-button">About</div> | <div id="menu-button">Friends</div> | <div id="menu-button">Photos</div> | <div id="menu-button">Settings</div>
             </div>

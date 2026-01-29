@@ -1,7 +1,7 @@
 <?php 
     session_start();
-    unset($_SESSION['mybook_user_id']);
     include("Classes/connect.php");
+    include("Classes/user.php");
     include("Classes/login-class.php");
 
     // Check User Logged In //
@@ -13,7 +13,13 @@
         if($result) {
             
             // Retrieve User Data //
-            echo "Everything is fine";
+            $user = new User();
+            $user_data = $user->get_user($id);
+
+            if(!$user_data) {
+                header("Location: login.php");
+                die;
+            }
 
         } else {
             header("Location: login.php");
@@ -24,3 +30,5 @@
         die;
     }
 
+    // Grab User Information - Variables //
+    $full_name = $user_data['first_name'] . " " . $user_data['last_name'];
