@@ -69,46 +69,28 @@
 
                     <!-- Post Box -->
                     <div id="post-box">
-                        <textarea id="text-area" placeholder="What's on your mind?"></textarea>
-                        <input id="post-button" type="submit" value="post">
+                        <form method="post">
+                            <textarea name="post" id="text-area" placeholder="What's on your mind?"></textarea>
+                            <input id="post-button" type="submit" value="post">
+                        </form>
                     </div>
 
                     <!-- Profile Posts -->
                     <div id="post-bar">
                         <div id="section-title">Posts</div>
-                        <div id="post">
-                            <div>
-                                <img src="Assets/Test-Images/user1.jpg" id="post-icon">
-                            </div>
-                            <div id="post-message">
-                                <div id="post-name">First Guy</div>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                <div id="post-options">
-                                    <a>Like</a> . <a>Comment</a> . <span>April 23 2020</span>
-                                </div>
-                            </div>
-                        </div>
+                        <?php 
+                            if($posts) {
+                                foreach($posts as $ROW) {
 
-                        <div id="post">
-                            <div>
-                                <img src="Assets/Test-Images/user2.jpg" id="post-icon">
-                            </div>
-                            <div id="post-message">
-                                <div id="post-name">Second Guy</div>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                <div id="post-options">
-                                    <a>Like</a> . <a>Comment</a> . <span>April 23 2020</span>
-                                </div>
-                            </div>
-                        </div>
+                                    // Grab User //
+                                    $user = new User();
+                                    $ROW_USER = $user->get_user($ROW['user_id']);
+
+                                    // Post //
+                                    include("post.php");
+                                }
+                            }
+                        ?>
                     </div>
                 </div>
 

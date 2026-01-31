@@ -2,6 +2,7 @@
     session_start();
     include("Classes/connect.php");
     include("Classes/user.php");
+    include("Classes/post.php");
     include("Classes/login-class.php");
 
     // Check User Logged In //
@@ -32,3 +33,26 @@
 
     // Grab User Information - Variables //
     $full_name = $user_data['first_name'] . " " . $user_data['last_name'];
+
+
+    // Posting //
+    if($_SERVER['REQUEST_METHOD'] == "POST") {
+        $post = new Post();
+        $id = $_SESSION['mybook_user_id'];
+        $result = $post->create_post($id, $_POST);
+
+        if($result == "") {
+            header("Location: profile.php");
+            die;
+        } else {
+            echo "<div id='error'>";
+            echo "The following errors occured: <br><br>";
+            echo $result;
+            echo "</div>";
+        }
+    }
+
+    // Collect Posts //
+    $post = new Post();
+    $id = $_SESSION['mybook_user_id'];
+    $posts = $post->get_posts($id);

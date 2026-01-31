@@ -179,16 +179,22 @@ body {
     padding: 10px;
 }
 
-#post-icon {
-    width: 75px;
-    margin-right: 5px;
-}
-
 #post {
     padding: 4px;
     font-size: 13px;
     display: flex;
     border-top: 1px solid #d5d5d5;
+}
+
+#post-icon {
+    width: 75px;
+    margin-right: 5px;
+}
+
+#post-message {
+    min-height: 95px;
+    position: relative;
+    width: 100%;
 }
 
 #post-name {
@@ -197,10 +203,12 @@ body {
 }
 
 #post-options {
+    position: absolute;
+    bottom: 0;
     margin-top: 5px;
-    margin-bottom: 5px;
     padding-top: 2px;
     border-top: 1px solid #999;
+    width: 100%;
 }
 
 #post-options a {
