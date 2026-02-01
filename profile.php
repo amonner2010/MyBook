@@ -41,26 +41,13 @@
                 <div id="friends-area">
                     <div id="friends-bar">
                         <div id="section-title">Friends</div>
-
-                        <div id="friend">
-                            <img id="friend-image" src="Assets/Test-Images/user1.jpg">
-                            <div id="friend-name">First Guy</div>
-                        </div>
-
-                        <div id="friend">
-                            <img id="friend-image" src="Assets/Test-Images/user2.jpg">
-                            <div id="friend-name">Second Guy</div>
-                        </div>
-
-                        <div id="friend">
-                            <img id="friend-image" src="Assets/Test-Images/user3.jpg">
-                            <div id="friend-name">First Girl</div>
-                        </div>
-
-                        <div id="friend">
-                            <img id="friend-image" src="Assets/Test-Images/user4.jpg">
-                            <div id="friend-name">Third Guy</div>
-                        </div>
+                        <?php 
+                            if($friends) {
+                                foreach($friends as $FRIEND_ROW) {
+                                    include("user.php");
+                                }
+                            }
+                        ?>
                     </div>
                 </div>
 

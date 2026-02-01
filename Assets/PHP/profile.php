@@ -1,8 +1,8 @@
 <?php 
     session_start();
     include("Classes/connect.php");
-    include("Classes/user.php");
-    include("Classes/post.php");
+    include("Classes/user-class.php");
+    include("Classes/post-class.php");
     include("Classes/login-class.php");
 
     // Check User Logged In //
@@ -56,3 +56,8 @@
     $post = new Post();
     $id = $_SESSION['mybook_user_id'];
     $posts = $post->get_posts($id);
+
+    // Collect Friends //
+    $user = new User();
+    $id = $_SESSION['mybook_user_id'];
+    $friends = $user->get_friends($id);
