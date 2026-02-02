@@ -35,18 +35,26 @@
         }
 
         public function check_login($id) {
-            
-            // Read in Database //
-            $DB = new Database();
-            $query = "select user_id from users where user_id = '$id' limit 1";
-            $result = $DB->read($query);
+            if(is_numeric($id)) {
 
-            // Check User Exists in System //
-            if($result) {
-                return true;
+                // Read in Database //
+                $DB = new Database();
+                $query = "select * from users where user_id = '$id' limit 1";
+                $result = $DB->read($query);
+
+                // Check User Exists in System //
+                if($result) {
+                    $user_data = $result[0];
+                    return $user_data;
+                } else {
+                    header("Location: login.php");
+                    die;
+                }
+
+            } else {
+                header("Location: login.php");
+                die;
             }
-
-            return false;
         }
 
     }

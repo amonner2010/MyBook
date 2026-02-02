@@ -203,8 +203,8 @@ body {
 }
 
 #post-options {
-    position: absolute;
-    bottom: 0;
+    /*position: absolute;*/
+    /*bottom: 0;*/
     margin-top: 5px;
     padding-top: 2px;
     border-top: 1px solid #999;

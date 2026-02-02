@@ -31,7 +31,11 @@
                 </div>
                 <div id="profile-name"><?php echo $full_name ?></div>
                 
-                <div id="menu-button">Timeline</div> | <div id="menu-button">About</div> | <div id="menu-button">Friends</div> | <div id="menu-button">Photos</div> | <div id="menu-button">Settings</div>
+                <a href="index.php"><div id="menu-button">Timeline</div></a> | 
+                <div id="menu-button">About</div> | 
+                <div id="menu-button">Friends</div> | 
+                <div id="menu-button">Photos</div> | 
+                <div id="menu-button">Settings</div>
             </div>
 
             <!-- Content: Friends + Posts -->
