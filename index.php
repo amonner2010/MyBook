@@ -11,13 +11,7 @@
 
     <body>
         <!-- Top Bar -->
-        <div id="top-bar">
-            <div id="site-name">
-                MyBook
-                <input type="text" id="search-box" placeholder="Search For People...">
-                <img id="profile-icon" src="Assets/Test-Images/selfie.jpg">
-            </div>
-        </div>
+        <?php include("header.php"); ?>
 
         <!-- Cover Area -->
          <div id="cover-area">
@@ -29,7 +23,7 @@
                 <div id="timeline-area">
                     <div id="timeline-bar">
                         <img src="Assets/Test-Images/selfie.jpg" id="timeline-profile-image">
-                        <div id="timeline-name">Mary Banda</div>
+                        <div id="timeline-name"><a href="profile.php"><?php echo $full_name ?></a></div>
                     </div>
                 </div>
 

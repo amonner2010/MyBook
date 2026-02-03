@@ -14,6 +14,12 @@ body {
     width: 800px;
     margin: auto;
     font-size: 30px;
+    text-decoration: none;
+}
+
+#site-name a {
+    text-decoration: none;
+    color: #d9dfeb;
 }
 
 #search-box {
@@ -248,4 +254,9 @@ body {
     color: #405d9b;
     font-size: 25px;
     margin-top: 5px;
+}
+
+#timeline-name a {
+    color: #405d9b;
+    text-decoration: none;
 }
