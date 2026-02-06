@@ -39,3 +39,13 @@
     $user = new User();
     $id = $_SESSION['mybook_user_id'];
     $friends = $user->get_friends($id);
+
+    // Profile Image //
+    $profile_pic = "";
+    if(file_exists($user_data['profile_image'])) {
+        $profile_pic = $user_data['profile_image'];
+    } elseif($user_data['gender'] == "Female") {
+        $profile_pic = "Assets/Test-Images/user_female.jpg";
+    } else {
+        $profile_pic = "Assets/Test-Images/user_male.jpg";
+    }

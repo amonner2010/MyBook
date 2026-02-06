@@ -20,7 +20,7 @@
             <div id="profile-area">
                 <div id="cover-image-area">
                     <img src="Assets/Test-Images/mountain.jpg" id="cover-image">
-                    <img src="Assets/Test-Images/selfie.jpg" id="profile-image">
+                    <img src="<?php echo $profile_pic ?>" id="profile-image">
                 </div>
                 <div id="profile-name"><?php echo $full_name ?></div>
                 

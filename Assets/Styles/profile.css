@@ -260,3 +260,15 @@ body {
     color: #405d9b;
     text-decoration: none;
 }
+
+/* Change Image Styles */
+#upload-button {
+    float: right;
+    background-color: #405d9b;
+    color: white;
+    border: none;
+    padding: 4px;
+    font-size: 14px;
+    border-radius: 2px;
+    width: 100px;
+}
